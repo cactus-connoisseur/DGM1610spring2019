@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BengalTiger : Feline
-{
+public class BengalTiger : Feline{
+  
     public bool banded;
 
 
