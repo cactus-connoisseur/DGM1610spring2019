@@ -17,8 +17,7 @@ public class If_Statements : MonoBehaviour {
 	void Update () {
 		if(stopLight == "Red" || stopLight == "Broken"){
 			//block of code that is run if the condition is met
-			
-		if(isUtahn){
+			if(isUtahn){
 			print("STOP! The light is RED.");
 			}
 			else{
