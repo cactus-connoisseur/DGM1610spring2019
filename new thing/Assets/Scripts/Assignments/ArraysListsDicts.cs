@@ -31,6 +31,7 @@ public ArrayList inventory = new ArrayList();
 		santasList.Add("Ty");
 		santasList.Add("Susie");
 		//this takes away jimmy from the list
+		santasList.Remove("Sam");
 		santasList.Remove("Jimmy");
 
 		print(clientList[2]);
