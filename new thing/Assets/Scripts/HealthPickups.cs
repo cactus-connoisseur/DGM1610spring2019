@@ -11,7 +11,7 @@ public class HealthPickups : MonoBehaviour {
 
 			print("You recieve one more life!");
 
-			HealthBar.healthCounter.AddPoints int healthValue;
+			HealthBar.healthToAdd.AddHealth int healthValue;
 
 			Destroy(gameObject);
 
