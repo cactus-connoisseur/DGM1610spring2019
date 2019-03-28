@@ -23,14 +23,13 @@ public class HealthBar : MonoBehaviour {
 		//Concats the " " plus the value of the current HP
 		HealthText.text = " " + currentHealth;
 		
-	}
-	// public void AddHealth (int healthToAdd) {
-	// 	//adds the points to the score so put the plus before = to add new points not replace old points
-	// 	HealthText += healthToAdd;
-	}
-	
-	// Update is called once per frame
+	//Update is called once per frame
 	void Update () {
+	
+	public int AddHealth (int healthToAdd) {
+		//adds the points to the score so put the plus before = to add new points not replace old points
+		HealthText += healthToAdd;
+	}
 
 	}
 		
