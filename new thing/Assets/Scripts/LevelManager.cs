@@ -30,6 +30,10 @@ private float gravityStore;
 		pcRigid = GameObject.Find("Player").GetComponent<Rigidbody2D>();
 		player = GameObject.Find("Player");
 	}
+
+	// public void respawnPlayer(){
+	// 	startCorountine ("RespawnPlayerCo");
+	// }
 	
 	// Update is called once per frame
 	void Update () {

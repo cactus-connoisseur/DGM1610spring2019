@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class HealthPickups : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+	public int healthValue;
+
+	void OnTriggerEnter2D (Collider2D other){
+		if(other.tag == "Player"){
+
+			print("You recieve one more life!");
+
+			// HealthBar.AddPoints int healthValue;
+
+			Destroy(gameObject);
+
+		}
+
 	}
 }
