@@ -5,17 +5,19 @@ using UnityEngine;
 public class HealthPickups : MonoBehaviour {
 
 	public int healthValue;
-
-	void OnTriggerEnter2D (Collider2D other){
+	
+	void OnTriggerEnter2D(Collider2D other){
 		if(other.tag == "Player"){
 
-			print("You recieve one more life!");
+			print("You've collected the health pickup!");
 
-			HealthBar.healthToAdd.AddHealth int healthValue;
+			HealthManager.AddHealth(healthValue);
 
 			Destroy(gameObject);
-
 		}
-
+		
 	}
+
 }
+	
+
