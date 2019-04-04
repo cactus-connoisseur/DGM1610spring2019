@@ -5,9 +5,10 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour {
 
 public GameObject currentCheckPoint;
-private Rigidbody2D pcRigid;
 
-private GameObject player;
+
+public GameObject player;
+private Rigidbody2D pcRigid;
 
 //particles
 public GameObject deathParticle;
@@ -27,8 +28,11 @@ private float gravityStore;
 
 	// Use this for initialization
 	void Start () {
-		pcRigid = GameObject.Find("Player").GetComponent<Rigidbody2D>();
-		player = GameObject.Find("Player");
+	
+		//player = GameObject.Find("Player");
+		print(player);
+		print(player.GetComponent<Rigidbody2D>());
+		pcRigid = player.GetComponent<Rigidbody2D>();
 	}
 
 	public void RespawnPlayer(){

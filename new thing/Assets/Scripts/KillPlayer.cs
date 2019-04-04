@@ -13,7 +13,9 @@ public LevelManager levelManager;
 	}
 	
 	void OnTriggerEnter2D(Collider2D other){
-		if(other.name == "player"){
+		print("I collided");
+		if(other.tag == "Player"){
+			print("killing player");
 			levelManager.RespawnPlayer();
 		}
 	}
