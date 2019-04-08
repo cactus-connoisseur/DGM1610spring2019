@@ -30,8 +30,8 @@ private float gravityStore;
 	void Start () {
 	
 		//player = GameObject.Find("Player");
-		print(player);
-		print(player.GetComponent<Rigidbody2D>());
+		
+		
 		pcRigid = player.GetComponent<Rigidbody2D>();
 	}
 
