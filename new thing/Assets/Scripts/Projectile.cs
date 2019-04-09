@@ -20,7 +20,7 @@ public class Projectile : MonoBehaviour {
 	void Start () {
 		player = GameObject.Find("Player");
 
-		enemyFaint = Resources.Load("Prefabs/Death_PS") as GameObject;
+		enemyFaint = Resources.Load("Prefabs/Faint_PS") as GameObject;
 
 		projectileParticle = Resources.Load("Prefabs/Respawn_PS") as GameObject;
 
