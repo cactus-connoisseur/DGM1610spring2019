@@ -20,11 +20,11 @@ public class Projectile : MonoBehaviour {
 	void Start () {
 		player = GameObject.Find("Player");
 
-		enemyFaint = Resources.Load("Prefabs/Faint_PS") as GameObject;
+		enemyFaint = Resources.Load("Prefabs/EnemyFaintParticle") as GameObject;
 
-		projectileParticle = Resources.Load("Prefabs/Respawn_PS") as GameObject;
+		projectileParticle = Resources.Load("Prefabs/EnemyFaintParticle") as GameObject;
 
-		if(player.transform.localScale.x <0){
+		if(player.transform.localScale.x < 0){
 			speed = -speed;
 		}
 

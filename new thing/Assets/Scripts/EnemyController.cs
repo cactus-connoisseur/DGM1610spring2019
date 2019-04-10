@@ -47,13 +47,12 @@ public Transform edgeCheck;
 			GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
 		}
 	}
-	// void Stunned(bool isStunned){
-	// 	//use coroutine for the respawn and timer of the enemy respawning
-	// 	if(isStunned){
-			
-	// 	}
-	// 	else{
-
-	// 	}
-	// }
+	void Stunned(bool isStunned){
+		//use coroutine for the respawn and timer of the enemy respawning
+		if(isStunned){
+			//gameobject with the rigidbody and box collider
+			Destroy (gameObject);
+		}
+		
+	}
 }

@@ -8,5 +8,6 @@ public class Kill : MonoBehaviour {
 		if(other.tag == "Player"){
 			Destroy(other);
 		}
+		
 	}
 }

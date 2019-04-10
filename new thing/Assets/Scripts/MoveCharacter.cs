@@ -43,8 +43,14 @@ public class MoveCharacter : MonoBehaviour
 		// Makes player jump
          if(Input.GetKeyDown(KeyCode.W) && grounded){
             Jump();
-         }
+        }
 
+				//player flip
+				if (GetComponent<Rigidbody2D>().velocity.x > 0)
+					transform.localScale = new Vector3(0.1007464f,0.1007464f,0.1007464f);
+
+				else if (GetComponent<Rigidbody2D>().velocity.x < 0)
+				transform.localScale = new Vector3(-0.1007464f,0.1007464f,0.1007464f);
 
 
 	 }
