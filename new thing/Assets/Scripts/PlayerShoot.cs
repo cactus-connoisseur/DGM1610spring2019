@@ -6,6 +6,9 @@ public class PlayerShoot : MonoBehaviour {
 	public Transform firePoint;
 	public GameObject projectile;
 
+	public int maxAmmo = 10;
+	// public in currentAmmo;
+
 	// Use this for initialization
 	void Start () {
 		//load projectile from resources/prefabs folder
@@ -17,5 +20,10 @@ public class PlayerShoot : MonoBehaviour {
 		if(Input.GetKeyDown(KeyCode.RightControl))
 			Instantiate(projectile,firePoint.position, firePoint.rotation);
 
+		//script saying that every time you hit the right control button then you lose one ammo
+
+		//if statement saying "if there is no more ammo (= 0) then you cant fire anymore
+
 	}
+
 }

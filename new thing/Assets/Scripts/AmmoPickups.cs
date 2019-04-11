@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class AmmoPickups : MonoBehaviour {
 
-	public bool ammo;
+	public int ammoAmount;
 
 	void OnTriggerEnter2D (Collider2D other){
 		if(other.tag == "Player"){
 
 			print("You've collected ammo!");
 
-			// ScoreManager.AddPoints(coinValue);
+			AmmoManager.AddAmmo(ammoAmount);
 
 			Destroy(gameObject);
 
