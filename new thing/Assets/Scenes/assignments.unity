@@ -475,7 +475,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -380.82, y: 164.29999}
+  m_AnchoredPosition: {x: -562, y: 164.29999}
   m_SizeDelta: {x: 98.3, y: 41.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &169334377
@@ -1029,7 +1029,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4.609783
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1052,8 +1052,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.86, y: -1.9, z: -3.1820996}
-  m_LocalScale: {x: 0.320564, y: 0.320564, z: 0.320564}
+  m_LocalPosition: {x: -30.35, y: 0.88, z: -3.1820996}
+  m_LocalScale: {x: 0.27648646, y: 0.320564, z: 0.320564}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
@@ -2006,7 +2006,7 @@ GameObject:
   m_Layer: 0
   m_Name: Death Box
   m_TagString: Untagged
-  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2755,7 +2755,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -295.45, y: 222.79997}
+  m_AnchoredPosition: {x: -476.63, y: 222.79997}
   m_SizeDelta: {x: 72.4, y: 40.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1581500296
@@ -2973,7 +2973,7 @@ GameObject:
   m_Layer: 0
   m_Name: FirePoint
   m_TagString: Untagged
-  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3131,7 +3131,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -296.13, y: 164.8}
+  m_AnchoredPosition: {x: -477.31, y: 164.8}
   m_SizeDelta: {x: 73.75, y: 42.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1767957869
@@ -3218,7 +3218,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -108.71, y: 222.6}
+  m_AnchoredPosition: {x: -289.88998, y: 222.6}
   m_SizeDelta: {x: 63.36, y: 39.57}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1800233333
@@ -3514,7 +3514,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -190.99, y: 222.8}
+  m_AnchoredPosition: {x: -372.16998, y: 222.8}
   m_SizeDelta: {x: 78.1, y: 31.373}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2006611183
@@ -3701,6 +3701,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
+  animator: {fileID: 0}
 --- !u!114 &2035187121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3747,7 +3748,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -381.2, y: 222.8}
+  m_AnchoredPosition: {x: -562.38, y: 222.8}
   m_SizeDelta: {x: 99.1, y: 40.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2044104467

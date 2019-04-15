@@ -51,8 +51,10 @@ private float gravityStore;
 		pcRigid.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		//point penalty
 		ScoreManager.AddPoints(-pointPenaltyOnDeath);
+		
 		//debug message
 		Debug.Log ("Player Respawn");
+
 		//respawn delay
 		yield return new WaitForSeconds (respawnDelay);
 		//gravity restore

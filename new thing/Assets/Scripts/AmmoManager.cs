@@ -14,7 +14,7 @@ public class AmmoManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//data UI Text component
-		//modify the parent (score counter) to modify the child (score amount)
+		//modify the parent to modify the child 
 		seedAmount = GetComponent<Text>();
 
 		ammo = 0;
@@ -37,16 +37,15 @@ public class AmmoManager : MonoBehaviour {
 	}
 	
 
-	// static means it cant change. accessing this from another script to change the score
+	// static means it cant change. accessing this from another script to change the Amount
 	public static void AddAmmo (int seedAmount) {
 		//adds the points to the score so put the plus before = to add new points not replace old points
 		ammo += seedAmount;
 
-		//score = score + pointsToAdd;  <-longhand 
-
 	//public static void Reset () {
 	// Scored;
 	//}
+	
 	}
 }
 
