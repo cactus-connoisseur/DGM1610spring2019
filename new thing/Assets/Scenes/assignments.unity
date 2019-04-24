@@ -3671,6 +3671,7 @@ GameObject:
   - component: {fileID: 2035187119}
   - component: {fileID: 2035187120}
   - component: {fileID: 2035187121}
+  - component: {fileID: 2035187122}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3802,7 +3803,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
-  animator: {fileID: 0}
+  animator: {fileID: 2035187122}
 --- !u!114 &2035187121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3817,6 +3818,24 @@ MonoBehaviour:
   firePoint: {fileID: 1604522769}
   projectile: {fileID: 1418022036583656, guid: daa7f1cf18432ab4f9facaa534f67ac1, type: 2}
   maxAmmo: 10
+--- !u!95 &2035187122
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2035187115}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 08876d279cccdf344b157eec00b1cb21, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2044104465
 GameObject:
   m_ObjectHideFlags: 0
