@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerShoot : MonoBehaviour {
 	public Transform firePoint;
 	public GameObject projectile;
+	// float nextFire = 0.0f;
 
 	public int maxAmmo = 10;
 	// public in currentAmmo;
