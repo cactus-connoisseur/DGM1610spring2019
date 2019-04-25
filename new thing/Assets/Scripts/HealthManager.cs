@@ -48,5 +48,10 @@ public class HealthManager : MonoBehaviour {
 	// Scored;
 	//}
 	}
+	
+	public static void RemoveHealth (int healthToRemove) {
+		//adds the points to the score so put the plus before = to add new points not replace old points
+		health -= healthToRemove;
+	}
 }
 
