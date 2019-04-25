@@ -33,7 +33,7 @@ public class AmmoManager : MonoBehaviour {
 			//OnTriggerRightControl?
 // 			if(Input.GetKeyDown(KeyCode.RightControl))
 // 			Instantiate(projectile,firePoint.position, firePoint.rotation);
-			ammo - int1
+			ammo - int1;
 		}
 
 		//this makes a string 
