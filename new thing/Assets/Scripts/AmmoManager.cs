@@ -27,7 +27,14 @@ public class AmmoManager : MonoBehaviour {
 		// single line (line 27) makes it so braces arent needed
 		//you can put in braces if you want 
 		if (ammo < 0)
-			ammo = 5;
+			ammo = 0;
+		
+		if (ammo > 0){
+			//OnTriggerRightControl?
+// 			if(Input.GetKeyDown(KeyCode.RightControl))
+// 			Instantiate(projectile,firePoint.position, firePoint.rotation);
+			ammo - int1
+		}
 
 		//this makes a string 
 		seedAmount.text = " " + ammo;
