@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class Spike : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+	public static int healthValue;
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	void OnTriggerEnter2D(Collider2D other){
+		if(other.tag == "Player"){
+			print("Ouch! you've hit a spike!");
+			
+			HealthManager.RemoveHealth(healthValue);
 }
