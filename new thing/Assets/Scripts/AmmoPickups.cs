@@ -12,6 +12,7 @@ public class AmmoPickups : MonoBehaviour {
 			print("You've collected ammo!");
 
 			AmmoManager.AddAmmo(ammoAmount);
+			
 
 			Destroy(gameObject);
 

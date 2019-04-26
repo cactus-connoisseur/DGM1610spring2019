@@ -37,10 +37,10 @@ public class AmmoManager : MonoBehaviour {
 			ammo -= 1;
 			
 
-		// if (ammo > 0){
-		// 	//then you cant shoot ammo anymore
-		// 	// KeyCode.RightControl();
-		// 	ammo --;
+		if (ammo < 0){
+			ammo = 0;
+		}
+			
 			 
 		
 		
