@@ -8,6 +8,12 @@ public class HealthPickups : MonoBehaviour {
 
 	void Update (){
 		// animator.SetBool("isSpinning",true);
+		
+		 Vector3 scale = transform.localScale;
+ 
+         scale.Set(0.5f, 0.5f, 1f);
+ 
+         transform.localScale = scale;
 	}
 	
 	void OnTriggerEnter2D(Collider2D other){

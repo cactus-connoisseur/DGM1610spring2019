@@ -53,7 +53,7 @@ private float gravityStore;
 		ScoreManager.AddPoints(-pointPenaltyOnDeath);
 		
 		//debug message
-		Debug.Log ("Player Respawn");
+		// Debug.Log ("Player Respawn");
 
 		//respawn delay
 		yield return new WaitForSeconds (respawnDelay);

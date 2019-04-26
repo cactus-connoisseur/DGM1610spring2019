@@ -23,10 +23,11 @@ public class MoveCharacter : MonoBehaviour
         // Use this for initialization
 	    void Start () {
 					//Default to true on grounded
-
+				animator=gameObject.GetComponent<Animator>();
 				// animation reset
 				animator.SetBool("isWalking",false);
-				animator.SetBool("isJumping",false);
+				animator.SetBool("jumping",false);
+			
 
 	    }
 
@@ -46,20 +47,24 @@ public class MoveCharacter : MonoBehaviour
 		moveVelocity = 0f;
 
 		// Moves player left and right with ket a and key d
-		 if(Input.GetKey(KeyCode.D)){
+		 if(Input.GetKey(KeyCode.D))
+		 {
 			//  GetComponent<Rigidbody2D>().velocity = new Vector2(moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
 			moveVelocity = moveSpeed;
 			 animator.SetBool("isWalking",true);
 		}
-			else if(Input.GetKeyUp (KeyCode.D)){
+			else if(Input.GetKeyUp (KeyCode.D))
+			{
 			animator.SetBool("isWalking",false);
 			}
-		 if(Input.GetKey(KeyCode.A)){
+		 if(Input.GetKey(KeyCode.A))
+		 {
 			 //GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
 			 moveVelocity = -moveSpeed;
 			 animator.SetBool("isWalking",true);
 		 }
-		 else if(Input.GetKeyUp (KeyCode.A)){
+		 else if(Input.GetKeyUp (KeyCode.A))
+		 {
 			 animator.SetBool("isWalking",false);
 		 }
 
@@ -67,9 +72,28 @@ public class MoveCharacter : MonoBehaviour
 		 GetComponent<Rigidbody2D>().velocity = new Vector2(moveVelocity, GetComponent<Rigidbody2D>().velocity.y);
 
 		// Makes player jump when w key is hit
-        if(Input.GetKeyDown(KeyCode.W) && grounded){
-            Jump();
-        }
+        if(Input.GetKeyDown(KeyCode.W)){
+				if(grounded)
+					{
+					animator.SetBool("jumping",true);
+					Jump();
+					doubleJump = true;
+					}
+				else if (doubleJump)
+					{
+						Jump();
+						doubleJump = false;
+						// animator.SetBool("isDoubleJumping",true);
+					}
+			}
+		//double jump code
+			if(grounded)
+			{
+				doubleJump = false;
+				animator.SetBool("jumping",false);
+			}
+
+			
 
 		//player flip when moving left to right
 		if (GetComponent<Rigidbody2D>().velocity.x > 0)
@@ -78,23 +102,16 @@ public class MoveCharacter : MonoBehaviour
 		else if (GetComponent<Rigidbody2D>().velocity.x < 0)
 			transform.localScale = new Vector3(-0.1f,0.1f,1f);
 
-			//double jump code
-			if(grounded){
-				doubleJump = false;
-				animator.SetBool("isJumping",false);
-			}
-
-			if(Input.GetKeyDown (KeyCode.W)&& !doubleJump && !grounded){
-				Jump();
-				doubleJump = true;
-				// animator.SetBool("isDoubleJumping",true);
-			}
+			
 
 
 	 }
 
 	 public void Jump(){
+		//animator.Play
+		animator.SetBool("jumping",true);
  		GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x,jumpHeight);
-		animator.SetBool("isJumping",true);
+		
+		
 	 }
 }
