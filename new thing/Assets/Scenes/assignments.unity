@@ -475,7 +475,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -562, y: 164.29999}
+  m_AnchoredPosition: {x: -449, y: 164.29999}
   m_SizeDelta: {x: 98.3, y: 41.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &169334377
@@ -2856,7 +2856,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -476.63, y: 222.79997}
+  m_AnchoredPosition: {x: -363.63, y: 222.79997}
   m_SizeDelta: {x: 72.4, y: 40.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1581500296
@@ -3228,6 +3228,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9a2047bcada17040a4bbced7aa25302, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
+  healthManager: {fileID: 0}
 --- !u!58 &1742617655
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3237,12 +3239,12 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.45, y: 0}
   serializedVersion: 2
-  m_Radius: 4.97
+  m_Radius: 4.51
 --- !u!212 &1742617656
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3335,7 +3337,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -477.31, y: 164.8}
+  m_AnchoredPosition: {x: -364.31, y: 164.8}
   m_SizeDelta: {x: 73.75, y: 42.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1767957869
@@ -3349,6 +3351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5483c93fd330066479151835ef434385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxAmmo: 10
 --- !u!114 &1767957870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3422,7 +3425,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -289.88998, y: 222.6}
+  m_AnchoredPosition: {x: -176.88998, y: 222.6}
   m_SizeDelta: {x: 63.36, y: 39.57}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1800233333
@@ -3436,6 +3439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a5e3ab3aebf2ab4790e2db49a2daeeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 10
 --- !u!114 &1800233334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3718,7 +3722,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -372.16998, y: 222.8}
+  m_AnchoredPosition: {x: -259.16998, y: 222.8}
   m_SizeDelta: {x: 78.1, y: 31.373}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2006611183
@@ -3789,8 +3793,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2035187115}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -37.83, y: -1.53, z: 0}
-  m_LocalScale: {x: 0.100746386, y: 0.100746386, z: 0.100746386}
+  m_LocalPosition: {x: -24.95, y: -0.43, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children:
   - {fileID: 127970321}
   - {fileID: 1604522769}
@@ -3820,7 +3824,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 13.22, y: 25.2}
+  m_Size: {x: 4.12, y: 9.6}
   m_EdgeRadius: 0
 --- !u!212 &2035187118
 SpriteRenderer:
@@ -3920,7 +3924,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1604522769}
   projectile: {fileID: 1418022036583656, guid: daa7f1cf18432ab4f9facaa534f67ac1, type: 2}
-  maxAmmo: 10
 --- !u!95 &2035187122
 Animator:
   serializedVersion: 3
@@ -3971,7 +3974,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -562.38, y: 222.8}
+  m_AnchoredPosition: {x: -449.38, y: 222.8}
   m_SizeDelta: {x: 99.1, y: 40.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2044104467

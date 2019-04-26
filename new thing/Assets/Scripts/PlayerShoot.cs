@@ -7,7 +7,7 @@ public class PlayerShoot : MonoBehaviour {
 	public GameObject projectile;
 	// float nextFire = 0.0f;
 
-	public int maxAmmo = 10;
+	
 	// public in currentAmmo;
 
 	// Use this for initialization

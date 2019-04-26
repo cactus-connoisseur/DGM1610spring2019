@@ -6,6 +6,7 @@ using UnityEngine;
 public class AmmoManager : MonoBehaviour {
 
 	public static int ammo;
+	public int maxAmmo = 10;
 
 	//if you want the variable prublic then you must put it as public
 	//defaults to private
@@ -26,21 +27,29 @@ public class AmmoManager : MonoBehaviour {
 
 		// single line (line 27) makes it so braces arent needed
 		//you can put in braces if you want 
-		if (ammo < 0)
-			ammo = 0;
+		// if (ammo < 0)
+		// 	ammo = 0;
 		
-		if (ammo > 0){
+	
 			//OnTriggerRightControl?
-// 			if(Input.GetKeyDown(KeyCode.RightControl))
-// 			Instantiate(projectile,firePoint.position, firePoint.rotation);
-			ammo - int1;
-		}
+		if(Input.GetKeyDown(KeyCode.RightControl))
+			// Instantiate(projectile,firePoint.position, firePoint.rotation);
+			ammo -= 1;
+			
+
+		// if (ammo > 0){
+		// 	//then you cant shoot ammo anymore
+		// 	// KeyCode.RightControl();
+		// 	ammo --;
+			 
+		
+		
 
 		//this makes a string 
 		seedAmount.text = " " + ammo;
 
-		if (ammo > 10)
-			ammo = 10;
+		if(ammo > maxAmmo)
+			ammo = maxAmmo;
 	}
 	
 

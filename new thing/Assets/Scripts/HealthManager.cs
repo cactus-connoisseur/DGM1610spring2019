@@ -6,6 +6,7 @@ using UnityEngine;
 public class HealthManager : MonoBehaviour {
 
 	public static int health;
+	public int maxHealth = 10;
 
 	//if you want the variable prublic then you must put it as public
 	//defaults to private
@@ -17,7 +18,7 @@ public class HealthManager : MonoBehaviour {
 		//modify the parent (score counter) to modify the child (score amount)
 		healthCounter = GetComponent<Text>();
 
-		health = 0;
+		health = maxHealth;
 		
 	}
 	
@@ -26,14 +27,14 @@ public class HealthManager : MonoBehaviour {
 
 		// single line (line 27) makes it so braces arent needed
 		//you can put in braces if you want 
-		if (health < 10)
-			health = 10;
+		if (health < 0)
+			health = 0;
 
 		//this makes a string 
 		healthCounter.text = " " + health;
 
-		if (health > 10)
-			health = 10;
+		if (health > maxHealth)
+			health = maxHealth;
 	}
 	
 
@@ -49,9 +50,10 @@ public class HealthManager : MonoBehaviour {
 	//}
 	}
 	
-	public static void RemoveHealth (int healthToRemove) {
+	public void SubtractHealth (int healthToSubtract) {
 		//adds the points to the score so put the plus before = to add new points not replace old points
-		health -= healthToRemove;
+		health -= healthToSubtract;
+		print("health reduced");
 	}
 }
 

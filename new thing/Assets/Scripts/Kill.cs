@@ -14,6 +14,8 @@ public class Kill : MonoBehaviour {
 	void onTriggerEnter2D(Collider2D other){
 		if(other.tag == "Player"){
 			levelManager.RespawnPlayer();
+
+			print("player hit deathbox");
 		}
 
 	}

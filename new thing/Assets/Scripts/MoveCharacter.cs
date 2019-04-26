@@ -73,10 +73,10 @@ public class MoveCharacter : MonoBehaviour
 
 		//player flip when moving left to right
 		if (GetComponent<Rigidbody2D>().velocity.x > 0)
-			transform.localScale = new Vector3(0.1007464f,0.1007464f,0.1007464f);
+			transform.localScale = new Vector3(0.1f,0.1f,1f);
 
 		else if (GetComponent<Rigidbody2D>().velocity.x < 0)
-			transform.localScale = new Vector3(-0.1007464f,0.1007464f,0.1007464f);
+			transform.localScale = new Vector3(-0.1f,0.1f,1f);
 
 			//double jump code
 			if(grounded){
