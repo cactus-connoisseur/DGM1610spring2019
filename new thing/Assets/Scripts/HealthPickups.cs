@@ -5,6 +5,10 @@ using UnityEngine;
 public class HealthPickups : MonoBehaviour {
 
 	public int healthValue;
+
+	void Update (){
+		// animator.SetBool("isSpinning",true);
+	}
 	
 	void OnTriggerEnter2D(Collider2D other){
 		if(other.tag == "Player"){
