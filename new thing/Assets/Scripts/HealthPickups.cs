@@ -11,7 +11,7 @@ public class HealthPickups : MonoBehaviour {
 		
 		 Vector3 scale = transform.localScale;
  
-         scale.Set(0.5f, 0.5f, 1f);
+         scale.Set(0.4f, 0.4f, 1f);
  
          transform.localScale = scale;
 	}

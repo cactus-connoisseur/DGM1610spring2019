@@ -14,7 +14,7 @@ public class PlayerShoot : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//load projectile from resources/prefabs folder
-		projectile = Resources.Load("Prefabs/SunflowerSeedProjectile") as GameObject;
+		projectile = Resources.Load("Prefabs/SunflowerSeedprojectile") as GameObject;
 
 	}
 	
