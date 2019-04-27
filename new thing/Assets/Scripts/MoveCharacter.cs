@@ -26,7 +26,7 @@ public class MoveCharacter : MonoBehaviour
 				animator=gameObject.GetComponent<Animator>();
 				// animation reset
 				animator.SetBool("isWalking",false);
-				animator.SetBool("jumping",false);
+				animator.SetBool("isJumping",false);
 			
 
 	    }
@@ -75,7 +75,7 @@ public class MoveCharacter : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.W)){
 				if(grounded)
 					{
-					animator.SetBool("jumping",true);
+					animator.SetBool("isJumping",true);
 					Jump();
 					doubleJump = true;
 					}
@@ -90,7 +90,7 @@ public class MoveCharacter : MonoBehaviour
 			if(grounded)
 			{
 				doubleJump = false;
-				animator.SetBool("jumping",false);
+				animator.SetBool("isJumping",false);
 			}
 
 			
@@ -109,7 +109,7 @@ public class MoveCharacter : MonoBehaviour
 
 	 public void Jump(){
 		//animator.Play
-		animator.SetBool("jumping",true);
+		animator.SetBool("isJumping",true);
  		GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x,jumpHeight);
 		
 		

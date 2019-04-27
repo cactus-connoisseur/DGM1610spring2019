@@ -6,6 +6,8 @@ public class LevelManager : MonoBehaviour {
 
 public GameObject currentCheckPoint;
 
+public HealthManager healthManager;
+
 
 public GameObject player;
 private Rigidbody2D pcRigid;
@@ -21,6 +23,9 @@ public float respawnDelay;
 //point penalty on death
 public int pointPenaltyOnDeath;
 
+public int health;
+
+
 
 //store gravity value
 private float gravityStore;
@@ -28,6 +33,8 @@ private float gravityStore;
 
 	// Use this for initialization
 	void Start () {
+
+		healthManager = FindObjectOfType <HealthManager>();
 	
 		//player = GameObject.Find("Player");
 		
@@ -35,11 +42,21 @@ private float gravityStore;
 		pcRigid = player.GetComponent<Rigidbody2D>();
 	}
 
+	// Update is called once per frame
+	void Update () {
+	
+		
+		
+	}
+
 	public void RespawnPlayer(){
 		StartCoroutine ("RespawnPlayerCo");
+		
+
 	}
 
 	public IEnumerator RespawnPlayerCo(){
+	
 		//generate death particle
 		Instantiate (deathParticle, pcRigid.transform.position, pcRigid.transform.rotation);
 		//hide PC
@@ -68,11 +85,9 @@ private float gravityStore;
 		//spawn pc
 		Instantiate (respawnParticle, currentCheckPoint.transform.position, currentCheckPoint.transform.rotation);
 
-
-	}
-	
-	// Update is called once per frame
-	void Update () {
+		
 		
 	}
+	
+	
 }

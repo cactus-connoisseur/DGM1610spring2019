@@ -7,6 +7,8 @@ public class HealthManager : MonoBehaviour {
 
 	public static int health;
 	public int maxHealth = 10;
+	public LevelManager levelManager;
+	public GameObject player;
 
 	//if you want the variable prublic then you must put it as public
 	//defaults to private
@@ -14,11 +16,15 @@ public class HealthManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+	
 		//data UI Text component
 		//modify the parent (score counter) to modify the child (score amount)
 		healthCounter = GetComponent<Text>();
 
 		health = maxHealth;
+		levelManager = FindObjectOfType <LevelManager>();
+
+		player = GameObject.Find("Player");
 		
 	}
 	
@@ -35,6 +41,7 @@ public class HealthManager : MonoBehaviour {
 
 		if (health > maxHealth)
 			health = maxHealth;
+
 	}
 	
 
@@ -55,5 +62,7 @@ public class HealthManager : MonoBehaviour {
 		health -= healthToSubtract;
 		print("health reduced");
 	}
+
+	
 }
 

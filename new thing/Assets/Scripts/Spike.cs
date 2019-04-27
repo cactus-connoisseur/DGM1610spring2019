@@ -8,13 +8,16 @@ public class Spike : MonoBehaviour {
 	public HealthManager healthManager;
 	public LevelManager levelManager;
 	public int health;
+	
+
+	
 	public GameObject touchedSpike;
 
 	void Start (){
 		healthManager = FindObjectOfType <HealthManager>();
 		levelManager = FindObjectOfType<LevelManager>();
 
-
+		
 
 	
 	}
@@ -23,10 +26,13 @@ public class Spike : MonoBehaviour {
 		
 
 		health = HealthManager.health;
+		
+		
 
-		if(health < 0){
+		if(health == 0){
 			levelManager.RespawnPlayer();
 
+			
 		}
 	}
 	
@@ -38,7 +44,7 @@ public class Spike : MonoBehaviour {
 
 			print("Ouch! you've hit a spike!");
 
-
+			
 		}
 
 		
